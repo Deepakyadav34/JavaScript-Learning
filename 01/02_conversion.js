@@ -32,4 +32,3 @@ console.log(booleanNumber)
 
 //here the value is false because the string is empty and if there is any value present in string like deepak or anything then its boolean value will be true .
 //similarly we can convert the string to boolean and boolean to string.
-
