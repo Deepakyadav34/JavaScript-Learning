@@ -49,15 +49,15 @@
 // whereas in Heap memory allocation for non-primitive datatypes , the reference of the value of object is provided  so the chnages made in new variables also reflects in the original value.
 
 //  STACK ALLOCATION EXAMPLE
-// let MyName="Deepak Yadav"
-// let NewName=MyName
-// console.log(NewName)
-// console.log(MyName)
+let MyName="Deepak Yadav"
+let NewName=MyName
+console.log(NewName)
+console.log(MyName)
 
-// NewName="Ritesh Singh"
+NewName="Ritesh Singh"
 
-// console.log(NewName)
-// console.log(MyName)
+console.log(NewName)
+console.log(MyName)
 
 // Here in Myname the value will be same and in NewName the value is changed .
 
