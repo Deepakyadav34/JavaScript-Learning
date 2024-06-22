@@ -40,3 +40,5 @@ let A2=100
 let A3 =600
 const newarr=Array.of(A1,A2,A3)
 console.log(newarr)
+
+// we can use array method of splice and as well as slice and the basic diffrence between both is the term that splice changes the actual array whereas the slice generally doesnot affect the original array.
