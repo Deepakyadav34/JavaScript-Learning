@@ -5,9 +5,9 @@ const deepak = {
   last_name: "Yadav",
   age: 22,
 };
-// const newObject=Object.create(deepak);
-// console.log(newObject.name)
-// console.log(newObject)
+const newObject=Object.create(deepak);
+console.log(newObject.name)
+console.log(newObject)
 
 // There maybe N number of nested objects in an object
 
@@ -39,21 +39,22 @@ obj2 = { 4: "d", 5: "e", 6: "f" };
 
 //we can use one more method which is defined as :
 
-// const obj3=Object.assign({},obj1,obj2) 
+const obj3=Object.assign({},obj1,obj2) 
 
 // here the starting parenthesis indicates that there is an empty object which carries  the obj1 and obj2 as its elements
 
 //++There is one more method which can be used to merge the two objects which is defined as :SPREAD OPERATOR as:
 const obj3={...obj1,...obj2}//it is easy to use 
 
-// console.log(obj3);
+console.log(obj3);
 
 
 //+++++++++++==== METHODS IN JS +++++++++++++++++++++===
 
-// console.log(Object.keys(deepak))
-// console.log(Object.values(deepak))
-// console.log(Object.entries(deepak)) // this will return the key value pair
+console.log(Object.keys(deepak))
+console.log(Object.values(deepak))
+console.log(Object.entries(deepak)) // this will return the key value pair
 
-console.log(deepak.hasOwnProperty('age'))// this returns the value as true if the key is present in the object and false if it is not present .
+console.log(deepak.hasOwnProperty('age'))
+// this returns the value as true if the key is present in the object and false if it is not present.
 // There are many more such properties and methods in js objects
