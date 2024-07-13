@@ -1,5 +1,5 @@
 //Objects can be created by two ways:
-// 1. By Constructor method in which singleton is formed.
+// 1. By Constructor method in which singleton is formed.  (Object.create is used in constructor method)
 // 2. By literal method in which singleton is not formed.
 
 // we will learn about the literal method in this :
@@ -47,7 +47,7 @@ myDetails.email="deepak74@it.com"
 // console.log(myDetails['email']) // here the email id is change
 
 // we can also freeze the email id or any details 
-Object.freeze(myDetails)   // here the email id is freezed and we cant change it now
+// Object.freeze(myDetails)   // here the email id is freezed and we cant change it now
 
 myDetails.email="deepak99999@gmail.com"
 // console.log(myDetails['email']) 
@@ -57,4 +57,17 @@ myDetails.email="deepak99999@gmail.com"
 
 // console.log(myDetails[mySym])
 // console.log( typeof [mySym])
-console.log(myDetails)
+// console.log(myDetails)
+
+
+// +++++++++++++++++++++++++++ Greetings +++++++++++++++++++++++++++++++++++++
+
+myDetails.greetings =function(){
+// console.log("Hello User")
+console.log(`hello User,${this.first_name} ${this.last_Name}`) // this method is used to get the data of the function or object.
+}
+// console.log(myDetails.greetings())
+// here it will give the Hello User as well as Undefined (undefined is the return value of the function)
+// to get the data without undefined we have to directly access the code as it is like myDetails.greetings().
+
+myDetails.greetings()
