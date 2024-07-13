@@ -39,7 +39,7 @@ obj2 = { 4: "d", 5: "e", 6: "f" };
 
 //we can use one more method which is defined as :
 
-const obj3=Object.assign({},obj1,obj2) 
+// const obj3=Object.assign({},obj1,obj2) 
 
 // here the starting parenthesis indicates that there is an empty object which carries  the obj1 and obj2 as its elements
 
@@ -58,3 +58,20 @@ console.log(Object.entries(deepak)) // this will return the key value pair
 console.log(deepak.hasOwnProperty('age'))
 // this returns the value as true if the key is present in the object and false if it is not present.
 // There are many more such properties and methods in js objects
+
+//++++++++++++++++++++=OBJECT DESTRUCTURE +++++++++++++++++++++++++++=
+
+// we can destructure objest using :
+
+const  myDetails={
+  name:"Deepak",
+  last_name:"Yadav",
+  Roll_no:34
+
+}
+//if we have to use the same name multiple time then we can use destructure as:
+
+const {name:d}=myDetails
+
+console.log(d)
+// here we can use soome short form of the large name to be defined.
