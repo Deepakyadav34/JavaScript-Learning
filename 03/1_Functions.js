@@ -68,3 +68,13 @@ function returnSecondValue(getArray){
 
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
+
+
+// This is hoisting concept where we will get the error if we declare a as const or let but if we declare it as var then we get the definition of varibale but not the valu as its value will be undefined and the secong console will print 20
+var a=10
+function name(){
+    console.log(a)
+    var a=20
+    console.log(a)
+}
+name()
