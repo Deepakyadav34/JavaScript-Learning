@@ -1,27 +1,27 @@
 // There are some values which are totally true in all scenarios and some are false in all scenario'sconst userEmail = []
 
-// if (userEmail) {
-//     console.log("Got user email");
-// } else {
-//     console.log("Don't have user email");
-// }
+if (userEmail) {
+    console.log("Got user email");
+} else {
+    console.log("Don't have user email");
+}
 
 // falsy values
 
-// false, 0, -0, BigInt 0n, "", null, undefined, NaN
+false, 0, -0, BigInt 0n, "", null, undefined, NaN
 
-//truthy values
-// "0", 'false', " ", [], {}, function(){}
+// truthy values
+"0", 'false', " ", [], {}, function(){}
 
-// if (userEmail.length === 0) {
-//     console.log("Array is empty");
-// }
+if (userEmail.length === 0) {
+    console.log("Array is empty");
+}
 
 const emptyObj = {}
 
-// if (Object.keys(emptyObj).length === 0) {
-//     console.log("Object is empty");
-// }
+if (Object.keys(emptyObj).length === 0) {
+    console.log("Object is empty");
+}
 
 // Nullish Coalescing Operator (??): null undefined ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
