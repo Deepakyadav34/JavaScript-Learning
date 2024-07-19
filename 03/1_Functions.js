@@ -1,6 +1,6 @@
 
 function sayMyName(){
-    console.log("H");
+    console.log("R");
     console.log("I");
     console.log("T");
     console.log("E");
@@ -10,10 +10,10 @@ function sayMyName(){
 
 // sayMyName()
 
-// function addTwoNumbers(number1, number2){
+function addTwoNumbers(number1, number2){
 
-//     console.log(number1 + number2);
-// }
+    console.log(number1 + number2);
+}
 
 function addTwoNumbers(number1, number2){
 
@@ -35,8 +35,8 @@ function loginUserMessage(username = "sam"){
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage("hitesh"))
+// console.log(loginUserMessage("Deepak"))
+// console.log(loginUserMessage("Deepak"))
 
 
 function calculateCartPrice(val1, val2, ...num1){
