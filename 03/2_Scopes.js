@@ -49,7 +49,7 @@ if (true) {
     const website = " Yadav";
     console.log(username + website);
   }
-  // console.log(website);
+  console.log(website);
 }
 
 // console.log(username);
@@ -62,7 +62,7 @@ console.log(add(1));
 function add(number) {
   return number + 1;
 }
-// console.log(add(4))
+console.log(add(4))
 
 // here if we declare the function above the declaration it will not work because the function is also known as expression and it is not purely function
 console.log(addtwo(3)); // this will throw error..[here it dont use the concept of hoisting]
@@ -70,4 +70,4 @@ const addtwo = function (num) {
   return num + 2;
 };
 
-// console.log(addtwo(4))
+console.log(addtwo(4))

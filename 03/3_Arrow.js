@@ -8,30 +8,30 @@ const details = {
     console.log(this);
   },
 };
-// details.mydetails()
-// console.log(this)
-// details.name="Ritesh"
-// details.mydetails()
+details.mydetails()
+console.log(this)
+details.name="Ritesh"
+details.mydetails()
 
 //++++++++++++++++++++ARROW FUNCTION ++++++++++++++++++++++++++++++++++
 
-// function detail(){
-// console.log(this)
-// }
-// detail() // it will give many parameters and informations like fetch , object , global,etc
+function detail(){
+console.log(this)
+}
+detail() // it will give many parameters and informations like fetch , object , global,etc
 
-// function detail(){
-//   const username="deepak"
-//   console.log(this)
-//   }
-//   detail()
+function detail(){
+  const username="deepak"
+  console.log(this)
+  }
+  detail()
 // this will give undefined becuase the this.username does not return any value as this method does not work in function.
 
-//  const detail= function(){
-//     const username="deepak"
-//     console.log(this.username)
-//     }
-//     detail()
+ const detail= function(){
+    const username="deepak"
+    console.log(this.username)
+    }
+    detail()
 // this will also give the undefined value as there will be no return statement to this.username
 
 // Now we will declare the arrow function as:\
@@ -39,7 +39,7 @@ const details = {
 const detail = () => {
   console.log(this);
 };
-// detail();
+detail();
 // this is syntax of arrow function declaration and using this method in arrow function will give an empty object.
 
 // const add =(num1,num2) =>{
