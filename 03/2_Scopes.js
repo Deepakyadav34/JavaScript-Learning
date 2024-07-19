@@ -11,9 +11,9 @@ if (true) {
   // here only this will give the output and the rest two will give the error this is why there is need of
   // scope to maintain the accessibility of the code
 }
-// console.log(a)
-// console.log(b)
-// console.log(c)
+console.log(a)
+console.log(b)
+console.log(c)
 
 // there are two types of scopes i.e:
 // 1. LOCAL SCOPE: The accessibilty of any variable is within the function or loop only and not outside that
@@ -27,27 +27,27 @@ if (true) {
   let b = 40;
   var c = 30;
 }
-// console.log(a)// here it will give the value of a=300.
+console.log(a)// here it will give the value of a=300.
 
 // +++++++++++++++++==Scopes description / Nested Scopes ++++++++++++++++++++++++++++++++
 
-// function one() {
-//   const name = "deepak";
+function one() {
+  const name = "deepak";
 
-//   function two() {
-//     const name2 = "Aditya";
-//     console.log(name);
-//   }
-//   console.log(name2);// it will throw reference error.
-//   two();
-// }
-// one()
+  function two() {
+    const name2 = "Aditya";
+    console.log(name);
+  }
+  console.log(name2);// it will throw reference error.
+  two();
+}
+one()
 
 if (true) {
   const username = "deepak";
   if (username === "deepak") {
     const website = " Yadav";
-    // console.log(username + website);
+    console.log(username + website);
   }
   // console.log(website);
 }
