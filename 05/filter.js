@@ -22,13 +22,13 @@ const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // we can also use forEach  method for doing so but we get more complexity like:
 
-const newNums=[]
-nums.forEach( (val) =>{
-if(val>4){
-    newNums.push(val)
-}
-})
-console.log(newNums)// this will give the same output as [5,6,7,8,9,10]
+// const newNums=[]
+// nums.forEach( (val) =>{
+// if(val>4){
+//     newNums.push(val)
+// }
+// })
+// console.log(newNums)// this will give the same output as [5,6,7,8,9,10]
 
 // We can pactice more in the .filter() method as:
 
@@ -46,4 +46,13 @@ const books = [
 
   // here it provides the details of the books like title and all we can use filter to get the desired data.
 
-  const details=books.filter( (value) => {} )
+//   const details=books.filter( (value) =>value.genre==='Science' 
+//     )
+//   console.log(details) // this will return the objects of books having the genre Science
+
+
+// similarly we can perform more operations on this as:
+
+const details=books.filter( (value) =>value.publish>1990
+)
+console.log(details)
