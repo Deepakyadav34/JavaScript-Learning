@@ -3,17 +3,17 @@
 
 const arr = ["deepak", "sheru", "ritesh"];
 
-// arr.forEach(function (val){
-//     console.log(val)
-// })
+arr.forEach(function (val){
+    console.log(val)
+})
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // WE CAN USE ARROW FUNCTION AS WELL IN THIS
 
-// arr.forEach((value)=>{
-//     console.log(value)
-// })
+arr.forEach((value)=>{
+    console.log(value)
+})
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
 
@@ -23,7 +23,7 @@ function name(value) {
   console.log(value);
 }
 
-// arr.forEach(name)
+arr.forEach(name)
 // here we only have to provide the reference of the function and not fully execute the function.
 
 //++++++++++++++++++++++++++++++++++++++++++++++
