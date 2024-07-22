@@ -46,13 +46,13 @@ const books = [
 
   // here it provides the details of the books like title and all we can use filter to get the desired data.
 
-//   const details=books.filter( (value) =>value.genre==='Science' 
-//     )
-//   console.log(details) // this will return the objects of books having the genre Science
+  const details=books.filter( (value) =>value.genre==='Science' 
+    )
+  console.log(details) // this will return the objects of books having the genre Science
 
 
 // similarly we can perform more operations on this as:
 
-const details=books.filter( (value) =>value.publish>1990
+const detailss=books.filter( (value) =>value.publish>1990
 )
 console.log(details)
