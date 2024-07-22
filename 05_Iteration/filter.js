@@ -1,12 +1,12 @@
 // Basically forEach method  never returns any value so if we used to store the forEach method in some new variable then we can not access the value of that variable further on.
 
-// const arr=["deepak" , 'sheru','ritesh']
+const arr=["deepak" , 'sheru','ritesh']
 
-//  const detail=arr.forEach( (value) =>
-// {
-//     console.log(value)
-// return value
-// })
+ const detail=arr.forEach( (value) =>
+{
+    console.log(value)
+return value
+})
 
 // console.log(detail)// here it will give undefined
 
