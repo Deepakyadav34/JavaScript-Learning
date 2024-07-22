@@ -1,10 +1,10 @@
 // first we will learn about the map method as:
 
-// const nums=[1,2,3,4,5]
+const nums=[1,2,3,4,5]
 
-// const value=nums.map( (val) => {return num+10})
+const value=nums.map( (val) => {return num+10})
 
-// console.log(value)
+console.log(value)
 // we can do the same with forEach method as:
 
 // nums.forEach( (val) => {console.log(val+10)})
