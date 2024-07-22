@@ -7,7 +7,7 @@ const value=nums.map( (val) => {return num+10})
 console.log(value)
 // we can do the same with forEach method as:
 
-// nums.forEach( (val) => {console.log(val+10)})
+nums.forEach( (val) => {console.log(val+10)})
 
 // Now the chaining method generally provides the details as:
 
