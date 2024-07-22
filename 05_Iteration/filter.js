@@ -22,13 +22,13 @@ const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // we can also use forEach  method for doing so but we get more complexity like:
 
-// const newNums=[]
-// nums.forEach( (val) =>{
-// if(val>4){
-//     newNums.push(val)
-// }
-// })
-// console.log(newNums)// this will give the same output as [5,6,7,8,9,10]
+const newNums=[]
+nums.forEach( (val) =>{
+if(val>4){
+    newNums.push(val)
+}
+})
+console.log(newNums)// this will give the same output as [5,6,7,8,9,10]
 
 // We can pactice more in the .filter() method as:
 
