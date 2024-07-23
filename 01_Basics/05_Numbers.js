@@ -56,4 +56,18 @@ const a=-11
 // 5. Generating random value
 const min=1
 const max=6
-console.log(Math.floor(Math.random()* (max-min+1))+min)
+// console.log(Math.floor(Math.random()* (max-min+1))+min)
+
+// let ab="5"
+// let c=10
+// console.log(ab+c)
+
+let x=10
+if(true){
+    let x=20
+    // console.log(x)
+}
+// console.log(x)
+
+let cc=1
+console.log(++cc + cc++)
