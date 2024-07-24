@@ -11,26 +11,44 @@ this will give the link or the details available in that webpage havinf that ID 
 
 we can further get the innerHTML written inside the webpage of that id using the command as:
 
-document.getElementById('firstHeading').innerHTML   this will give the innerHTML written in that heading and also we can manipulate that using command document.getElementById('id').iinnerHTML=' anything'  here 'anything' will be written over the innerHTML present over that id
+document.getElementById('firstHeading').innerHTML   this will give the innerHTML written in that heading and also we can manipulate that using command document.getElementById('id').iinnerHTML=' anything'  here 'anything' will be written over the innerHTML present over that id 
+
+_________________________________________________________________________________________________________________
 
 
+Now we can access the elements of a webpage and its content using the commands. Let's try some more command :
+
+1.document.getElementById()
+2.document.getElementById('title') this will provide all details with id title
+3.document.getElementById('title').id this will give the id name
+4.document.getElementById('title').className this will provide the className
+5.document.getElementById('title').getAttribute('id') this will give the attribute named title
+6.document.getElementById('title').getAttribute('class') this will give the attribute named class
+7.document.getElementById('title').setAttribute('class','deepak')  this will set the value of attribute to new.
+
+
++++++++++++++++++++++++++++++++++++++
+
+Now we will work on a specific id or class and access andd manioulate its value 
 -->
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
     <title>DOM BASICS</title>
+    <style>
+      .bg-black{
+        background-color: black;
+        color:white;
+      }
+    </style>
 </head>
-<body>
-  ><div>
-    <div class="bg-black"></div>
-    <h1 class="heading">DOM LEARNING</h1>
- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magnam sit numquam consequatur, repellat quidem accusamus quis ad debitis animi, atque, laboriosam nulla voluptate facilis beatae ipsum expedita fuga eum?</p>
+<body  class="bg-black">
+  <div>
+    <div></div>
+    <h1 id="title" class="heading">DOM LEARNING</h1>
+ <p>Lorem ipsum dolor sit amet.</p>
   </div>
 
 </body>
