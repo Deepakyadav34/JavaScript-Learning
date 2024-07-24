@@ -29,7 +29,46 @@ Now we can access the elements of a webpage and its content using the commands. 
 
 +++++++++++++++++++++++++++++++++++++
 
-Now we will work on a specific id or class and access andd manioulate its value 
+Now we will work on a specific id or class and access andd manipulate its value :
+
+1. document.getElementById('title') this will give the details with id title
+2.const title= document.getElementById('title') we store all that value in a variable
+3. Now we can style using this details with all the details and attributes like:
+   title.style.backgroundColor-"blue" this will set the background colour ti blue
+
+4. title.style.padding='15px' we can add padding to the text 
+
+5. title.style.borderRadius='15px' we can add borderRadius to the specific data.
+
+----------------------------------------------------------------------------
+
+Now we can access the content of that id or class using ommands like:
+
+1. title.innerHtml
+2. title.textContent
+3. title.innerText
+ This will give the content of the specific id or class but we will be getting diifrence in the details as:
+
+1.innerHTML will provide all the Html written under that specific id or class so it will provide all 
+the details with span or any tag used under that html content.
+
+2.innerText will provide the details that are shown in the browser like if there is span in heading and the span is set to be display:none then the content under span will not be shown in the browser . hence innerText will not access those data .
+
+3.textContent this will give the complete detail whether it is set to hidden or to be shown in browser.
+
+-----------------------------------------------------------------------------------------------------------------
+
+QUERY SELECTOR
+
+1. document.querySelector('.heading') this will give the desired output that you require as per the details provided in argument.
+-- we can access the elements using querySelector same as that of the CSS selectors like we use dot(.) for  heqding and # for class and so on.
+-- we can perform many operations using the querySelector method like providing the details and accesing the individual details and manipulationg them.
+-- now the only limitation of the queryselector is that it selects only one item and hence we can not acces the other element.
+
+so for that reason we use querySelectorAll().
+
+
+
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -47,8 +86,15 @@ Now we will work on a specific id or class and access andd manioulate its value
 <body  class="bg-black">
   <div>
     <div></div>
-    <h1 id="title" class="heading">DOM LEARNING</h1>
+    <h1 id="title" class="heading">DOM LEARNING </h1>
+    <h2>Lorem, ipsum dolor.</h2>
+    <h2 >Lorem ipsum dolor sit.</h2>
  <p>Lorem ipsum dolor sit amet.</p>
+<ul>
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>
+</ul>
   </div>
 
 </body>
