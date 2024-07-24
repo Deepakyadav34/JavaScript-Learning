@@ -67,7 +67,23 @@ QUERY SELECTOR
 
 so for that reason we use querySelectorAll().
 
+1. document.querySelectorAll('.heading') the acces and all the details will be same one major diffrence is that it will give us the NodeList which is similar to array but not the exactly array 
+-- we can use various methods which are used in arrays like accesing the elements as well as the forEacg method ,etc.
+-- Basically querySelectAll() selects all the list or heading or all  the elements available on that definite webpage
 
+--we can use querySelector all for all type of access and then it give the nodeList and using that nodeList we can access and manipulate those nodeList.
+==============================================================================================================
+
+we can use document.getElementByClassName('className')
+this returns the HTML collection and that Html collection is diffrent from arrays and we can convert that in arrays using the function named as:
+
+0. document.getElementByClassName('className')
+
+1. const ListName=document.getElementsByClassName('list-item')
+
+2. const ARR= Array.from(ListName)
+
+3. ARR.forEach((l)=>{l.style.color='blue'})
 
 -->
 <!DOCTYPE html>
@@ -91,9 +107,9 @@ so for that reason we use querySelectorAll().
     <h2 >Lorem ipsum dolor sit.</h2>
  <p>Lorem ipsum dolor sit amet.</p>
 <ul>
-  <li>one</li>
-  <li>two</li>
-  <li>three</li>
+  <li class="list-item">one</li>
+  <li class="list-item">two</li>
+  <li class="list-item">three</li>
 </ul>
   </div>
 
