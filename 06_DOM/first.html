@@ -1,3 +1,27 @@
+<!--Basically we have to study DOM and its manipulationnover a webpage like how can we get information from a website and hoe can we access the information available in that websites
+
+we can acess the details of a website using the command console.log(window) this will give many prototype available over the network and then when we put .document in it then it will show many prototypr available over this .
+now we can get document of any webpages using the command console.log(window.document) or  console.log(document)
+
+this will provide a complete list of html header and files but if you want many dir like jquery and  all then you have to give the command as: console.dir(document) This will give complete directory of all the documents available over the webpage.
+
+Now if we have to manipulate or access any documents through its className or id name then we will give command as:
+document.getElementById('ID NAME')
+this will give the link or the details available in that webpage havinf that ID name.
+
+we can further get the innerHTML written inside the webpage of that id using the command as:
+
+document.getElementById('firstHeading').innerHTML   this will give the innerHTML written in that heading and also we can manipulate that using command document.getElementById('id').iinnerHTML=' anything'  here 'anything' will be written over the innerHTML present over that id
+
+
+
+
+
+-->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +30,11 @@
     <title>DOM BASICS</title>
 </head>
 <body>
-    <h1>DOM BASICS</h1>
+  ><div>
+    <div class="bg-black"></div>
+    <h1 class="heading">DOM LEARNING</h1>
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magnam sit numquam consequatur, repellat quidem accusamus quis ad debitis animi, atque, laboriosam nulla voluptate facilis beatae ipsum expedita fuga eum?</p>
+  </div>
+
 </body>
 </html>
