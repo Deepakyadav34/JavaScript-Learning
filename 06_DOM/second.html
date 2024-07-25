@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM LEARNING</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+      <div class="day">Saturday</div>
+      <div class="day">Sunday</div>
+    </div>
+  </body>
+  <script>
+    const parents = document.querySelector(".parent");
+    // console.log(parents);
+    // console.log(parents.children[0].innerHTML);
+
+    // for (let i = 0; i < parents.children.length; i++) {
+    //   console.log(parents.children[i].innerHTML);
+    // }
+    // for (let i = 0; i < parents.children.length; i++) {
+    //   parents.children[i].style.color = "red";
+    // }
+  
+    // console.log(parents.firstElementChild.innerHTML)
+    // console.log(parents.lastElementChild.innerHTML)
+    // console.log(parents.style.color='red')
+
+  //   const H=document.querySelector('.day');
+  //   console.log(H.parentElement.innerHTML)
+  //  console.log(H.nextElementSibling)
+   
+console.log("NODES" ,parents.childNodes)// this will give the node list value to 15 because it counts all the break as well as the texts.
+
+  </script>
+</html>
