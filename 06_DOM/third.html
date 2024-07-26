@@ -7,6 +7,25 @@
 </head>
 <body style="background-color: #212121; color:#fff">
     
-    <h1 class="first">Deepak</h1>
+   
 </body>
+<script>
+const div=document.createElement('div');
+console.log(div);
+div.className='div-class';
+div.id=Math.round((Math.random()*10)+1) // to get the value exact between 1 to 10 we can use Math.floor()
+div.setAttribute('title','Deepak');
+// div.innerHTML='<h1>HI DEEPAK YADAV</h1>';
+// There is one more method to create and append the text content in the div which is :
+
+const addText=document.createTextNode("HII DEEPAK");
+div.appendChild(addText);
+
+document.body.append(div)
+div.style.color='red';
+div.style.padding='15px';
+div.style.backgroundColor='blue';
+
+
+</script>
 </html>
