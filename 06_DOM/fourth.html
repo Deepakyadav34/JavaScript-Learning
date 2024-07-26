@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM LEARNING</title>
-</head>
-<body style="background-color: black;color:#fff;">
-    <h1>Deepak Yadav</h1>
-</body>
+  </head>
+  <body style="background-color: black; color: #fff">
+    <!-- <h1>Deepak Yadav</h1> -->
+    <ul class="list-item">
+      <li>Python</li>
+    </ul>
+  </body>
+  <script>
+    function addLang(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".list-item").append(li);
+    }
+    addLang("Java");
+    addLang("JavaScript");
+
+    // optimized Method
+
+    function addlangopti(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".list-item").append(li);
+    }
+    addlangopti("Ruby");
+    addlangopti("TypeScript");
+
+    // Editing the Element
+
+    // Edit 1: innerHTML
+    const edit2 = document.querySelector("li:nth-child(2)");
+    // edit2.innerHTML='C++';
+
+//Editing 2: replaceWith function
+    // There are more methods to edit elements as:
+    const newli = document.createElement("li");
+    newli.innerText = "Mojo";
+    edit2.replaceWith(newli); // here we are using replacewith function.
+
+    // Editing 3: outerHTML
+    const firstEdit=document.querySelector('li:first-child');
+    firstEdit.outerHTML='<li>Deepak</li>';
+
+
+    // remove
+
+    const removeele=document.querySelector('li:first-child');
+    removeele.remove();
+  </script>
 </html>
