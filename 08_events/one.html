@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="owl"  src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    /* if we want to add Onclick function on any button then we can do it in three diffrent ways .
+    1. Using inline onClick='' event function.
+
+     <li><img width="200px" id="owl" onclick="alert('owl clicked')" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+
+     here onClick event is used inline the Html code .But this is old method and we can do it in two more ways.
+
+
+
+    2. Using the alert method in script file .
+
+    document.getElementById('owl').onclick=function(){
+    alert('owl clicked')
+}
+
+    
+*/
+// 3 using eventListener.
+
+document.querySelector('#owl').addEventListener('click',function(e){
+alert('owl has been clicked')
+
+// console.log(e.timeStamp)
+// this generally gives the timestamp like the time from the action takes place like in this case it will give time in milli second from the time the button is clicked.
+
+
+// console.log('event type:',e.type) 
+// This will give the type of event that took place like in this case it is click event.
+
+// console.log(e.target)// this will give the details of the element that is  being targeted like in this one the owl image is targeted so this will provide the complete details of the owl img element .
+
+// console.log(e.target.id)// this will give the i'd of the target.
+
+
+// console.log(e.currentTarget)
+
+  // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    
+
+console.log('Client X:', e.clientX);
+    console.log('Client Y:', e.clientY);
+    console.log('Screen X:', e.screenX);
+    console.log('Screen Y:', e.screenY);
+},false)
+
+// Here false denote the event propogation .
+
+/*Generally Event propogation is of two types:
+
+1. Bubble propogation : in this type of propogation the execution or interpretetion is carried out from bottom to top. Thus the inner element is interpreted first and then the outer element.this occurs when we give third parameter in event listener as "false" or by default it is carried out..
+
+
+2. Capturing:it is opposite of bubbling and it is executed from top to bottom . this occurs when we give third parameter in event listener as "true".
+
+*/
+
+// -- for onclick earlier attachEvent() method is used in internet explorer.
+// -- in jQuery we use  .on method for the same .
+
+</script>
+
+
+</html>
