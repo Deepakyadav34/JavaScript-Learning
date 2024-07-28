@@ -43,8 +43,8 @@
 */
 // 3 using eventListener.
 
-document.querySelector('#owl').addEventListener('click',function(e){
-alert('owl has been clicked')
+// document.querySelector('#owl').addEventListener('click',function(e){
+// alert('owl has been clicked')
 
 // console.log(e.timeStamp)
 // this generally gives the timestamp like the time from the action takes place like in this case it will give time in milli second from the time the button is clicked.
@@ -68,11 +68,11 @@ alert('owl has been clicked')
 
     
 
-console.log('Client X:', e.clientX);
-    console.log('Client Y:', e.clientY);
-    console.log('Screen X:', e.screenX);
-    console.log('Screen Y:', e.screenY);
-},false)
+// console.log('Client X:', e.clientX);
+//     console.log('Client Y:', e.clientY);
+//     console.log('Screen X:', e.screenX);
+//     console.log('Screen Y:', e.screenY);
+// },false)
 
 // Here false denote the event propogation .
 
@@ -88,6 +88,48 @@ console.log('Client X:', e.clientX);
 // -- for onclick earlier attachEvent() method is used in internet explorer.
 // -- in jQuery we use  .on method for the same .
 
+// ----------------------------------------------------------------------------------------------------------
+// --          EVENT PROPOGATION 
+
+// // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+    
+    //------------------------------------------------------------------------------------------------------
+
+    //-- PREVENT DEFAULT
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+
+
+    //---------------------------------------------------------------------------------------------------------
+
+    //-- REMOVE ELEMENT
+
+   document.querySelector('#images').addEventListener('click',function(e){
+console.log(e.target.tagName)
+if(e.target.tagName==='IMG'){
+    const removeIT = e.target.parentNode;
+removeIT.remove();
+
+}
+
+
+// // there is one more method to do so is :
+
+// removeIT.parentNode.removeChild(removeIT)
+
+
+
+   })
 </script>
 
 
