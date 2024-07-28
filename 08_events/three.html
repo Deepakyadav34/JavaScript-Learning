@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET INTERVAL</title>
+</head>
+<body>
+    <h1 id="t">Learning Events</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+   
+</body>
+<script>
+//    setInterval(function(){
+//     console.log('Deepak' ,Date.now())
+//    },3000)
+
+   //OR
+
+//   const datee= function(){
+//     console.log('Deepak' ,Date.now())
+//    }
+
+// setInterval(datee,1000)
+
+// we can also pass a 3rd parameter such as:
+
+const datee= function(name){
+    console.log(name ,Date.now())
+   }
+// setInterval(datee,1000,'Deepak Yadav')
+
+// To change the text dynamically :
+
+const OldText=document.querySelector('h1').innerHTML;
+const changeText=document.querySelector('h1');
+
+const func = function(){
+    changeText.innerHTML='Deepak Yadav';
+    console.log('Deepak yadav',Date.now())
+}
+let startFun;
+document.querySelector('#start').addEventListener('click',function(){
+  startFun= setInterval(func,1000);
+})
+
+document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(startFun);
+    changeText.innerHTML=`${OldText}`
+})
+</script>
+</html>
