@@ -33,3 +33,5 @@ console.log(url.replace('%20', '-'))
 console.log(url.includes('sundar'))
 
 console.log(gameName.split('-'));
+
+console.log('hello'.charAt(9)); // '' this will be the output it means blank
