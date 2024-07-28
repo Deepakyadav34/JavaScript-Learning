@@ -64,3 +64,5 @@ console.log(arr)
 console.log(newarr)
 console.log(typeof newarr)
 console.log(typeof arr)
+
+console.log(Math.max());// -infinity
