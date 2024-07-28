@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1 id="t">Learning Events</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log('Deepak')
+    // },3000)
+// OR 
+
+const name=function(){
+    console.log("deepak")
+}
+// setTimeout(name,2000)// this will console deepak after 2 
+
+//Changing content from the webpage(dynamically):
+const oldText=document.querySelector('#t').innerHTML;
+const text= document.querySelector('h1');
+const changeText=function(){
+    text.innerHTML='JavaScript is Best ---- Deepak Yadav'
+}
+
+const eventss=setTimeout(changeText,2000)// this will give the changeText content iin 2 seconds .
+
+//-------------------   Remove timeOut----------------------
+
+// clearTimeout(eventss);
+// this will remove the timeOut and text will never change bbut if we want to add this particular function to work whenever the user clicks on the stop button then we will have :
+
+document.querySelector('#stop').addEventListener('click',function(e){
+    clearTimeout(eventss);
+    text.innerHTML=`${oldText}`
+    console.log("stoppeddddddddddddddddd")
+})
+
+
+</script>
+</html>
