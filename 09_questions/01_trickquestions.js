@@ -8,7 +8,6 @@
 
 // // // // // // // console.log(typeof(1 + '2' + 3)) // value is 123 and type is string
 
-
 // // // // // // // let e = '2'*'3';
 // // // // // // // console.log(e) // 6
 // // // // // // // console.log(typeof e) // number
@@ -25,7 +24,6 @@
 
 // // // // // // // console.log(typeof NaN) // number
 
-
 // // // // // // // console.log([1,2] +[3,4]); // 1,23,4
 
 // // // // // // console.log(typeof (1+'1')); // string
@@ -34,7 +32,7 @@
 // // // // // // // (function(){
 // // // // // // //     console.log(x);
 // // // // // // //     var x=20;
-// // // // // // // })(); // undefined 
+// // // // // // // })(); // undefined
 
 // // // // // const arr=[1,2,3,4,5]
 // // // // // console.log(arr.slice(-2,-1)); // [4]
@@ -57,5 +55,8 @@
 
 // console.log(1 + - + + + - + 1)//2
 
-console.log( +4 + + + 5)
+// console.log( +4 + + + 5)
 
+const fun = function () {};
+console.log(typeof (() => {}));//function
+console.log(typeof fun)//function
