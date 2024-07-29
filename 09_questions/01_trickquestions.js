@@ -56,3 +56,6 @@
 // // console.log(typeof foo()) // object
 
 // console.log(1 + - + + + - + 1)//2
+
+console.log( +4 + + + 5)
+
