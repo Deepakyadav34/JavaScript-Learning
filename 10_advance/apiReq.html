@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API | REQUEST</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: white;
+      }
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        width: 300px;
+        margin: auto;
+        text-align: center;
+      }
+      .container {
+        padding: 16px;
+      }
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+      #hide{
+        display:none;
+      }
+    </style>
+  </head>
+  <body style="background-color: #212121; color: white">
+    <button id="button" type="button">Click Me!</button>
+    <div id="hide" class="card">
+     
+      <img id="myImage" src="" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4 id="name"><b>John Doe</b></h4>
+        <p id="follow">Followers</p>
+      </div>
+    </div>
+  </body>
+  <script>
+
+function hideAndSo(){
+  const dataSec=document.getElementById('hide')
+  if(dataSec.style.display==='none'){
+    dataSec.style.display='block';
+  }
+  else{
+    dataSec.style.display='none';
+  }
+}
+
+    // XMLTHHPREQ is basically a class so we reuire new kryword to directly convert it into objects
+    const reqURL = "https://api.github.com/users/hiteshchoudhary";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", reqURL); // generally this method is first step to get pr post the data.
+
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+
+      if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText);
+        console.log(data);
+        image = data.avatar_url;
+        followers = data.followers;
+        names = data.name;
+        const images = (document.getElementById("myImage").src = image);
+        const follow = (document.getElementById("follow").innerHTML = `${followers}`);
+        const name = (document.getElementById("name").innerHTML = `${names}`);
+        const button=document.getElementById('button').addEventListener('click',hideAndSo)
+      }
+    };
+
+    // here we get the data in string format so to convert the data to JSON format which is readable format we use JSON.parse method to do so
+
+    //-- onreadystateexchange generally used to track the state of the get and post method.
+    // -- redaystate gives the actual state of the  function.
+    xhr.send(); // generally open method is nnot called automatically it is called with the help of send() method and we can access  the api.
+  </script>
+</html>
