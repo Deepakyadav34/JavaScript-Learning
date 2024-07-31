@@ -24,15 +24,14 @@
         width: 100%;
         border-radius: 50%;
       }
-      #hide{
-        display:none;
+      #hide {
+        display: none;
       }
     </style>
   </head>
   <body style="background-color: #212121; color: white">
-    <button id="button" type="button">Click Me!</button>
+    <button id="button" type="button">Show Profile</button>
     <div id="hide" class="card">
-     
       <img id="myImage" src="" alt="Avatar" style="width: 100%" />
       <div class="container">
         <h4 id="name"><b>John Doe</b></h4>
@@ -41,16 +40,16 @@
     </div>
   </body>
   <script>
+    const dataSec = document.getElementById("hide");
 
-function hideAndSo(){
-  const dataSec=document.getElementById('hide')
-  if(dataSec.style.display==='none'){
-    dataSec.style.display='block';
-  }
-  else{
-    dataSec.style.display='none';
-  }
-}
+    function hideAndSo() {
+      if (dataSec.style.display === 'none' || dataSec.style.display === '') {
+                dataSec.style.display = 'block';
+            } else {
+                dataSec.style.display = 'none';
+            }
+        }
+    
 
     // XMLTHHPREQ is basically a class so we reuire new kryword to directly convert it into objects
     const reqURL = "https://api.github.com/users/hiteshchoudhary";
@@ -60,16 +59,18 @@ function hideAndSo(){
     xhr.onreadystatechange = function () {
       console.log(xhr.readyState);
 
-      if (xhr.readyState === 4) {
+      if (xhr.readyState === 4 && xhr.status === 200) {
         const data = JSON.parse(this.responseText);
         console.log(data);
-        image = data.avatar_url;
-        followers = data.followers;
-        names = data.name;
+        console.log(xhr.status);
+        const image = data.avatar_url;
+        const followers = data.followers;
+        const names = data.name;
         const images = (document.getElementById("myImage").src = image);
-        const follow = (document.getElementById("follow").innerHTML = `${followers}`);
+        const follow = (document.getElementById(
+          "follow"
+        ).innerHTML = `Followers :${followers}`);
         const name = (document.getElementById("name").innerHTML = `${names}`);
-        const button=document.getElementById('button').addEventListener('click',hideAndSo)
       }
     };
 
@@ -78,5 +79,9 @@ function hideAndSo(){
     //-- onreadystateexchange generally used to track the state of the get and post method.
     // -- redaystate gives the actual state of the  function.
     xhr.send(); // generally open method is nnot called automatically it is called with the help of send() method and we can access  the api.
+
+    const button = document
+      .getElementById("button")
+      .addEventListener("click", hideAndSo);
   </script>
 </html>
