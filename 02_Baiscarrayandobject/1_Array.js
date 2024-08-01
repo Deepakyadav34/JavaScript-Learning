@@ -66,3 +66,9 @@ console.log(typeof newarr)
 console.log(typeof arr)
 
 console.log(Math.max());// -infinity
+
+
+
+const arr2=['deepak','ayush','aditya']
+const deepak=arr2.includes('deepak')
+console.log(deepak)//true
