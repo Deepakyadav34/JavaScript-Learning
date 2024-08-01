@@ -51,16 +51,19 @@
         }
     
 
-    // XMLTHHPREQ is basically a class so we reuire new kryword to directly convert it into objects
+    // XMLHTTPREQ is basically a class so we reuire new kryword to directly convert it into objects
     const reqURL = "https://api.github.com/users/hiteshchoudhary";
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", reqURL); // generally this method is first step to get pr post the data.
+    xhr.open("GET", reqURL); // generally this method is first step to get or post the data.
 
     xhr.onreadystatechange = function () {
-      console.log(xhr.readyState);
+      console.log(xhr.readyState); 
+      //-- onreadystateexchange generally used to track the state of the get and post method.
 
       if (xhr.readyState === 4 && xhr.status === 200) {
-        const data = JSON.parse(this.responseText);
+        const data = JSON.parse(this.responseText);   
+        // -- redaystate gives the actual state of the  function.
+        
         console.log(data);
         console.log(xhr.status);
         const image = data.avatar_url;
@@ -76,9 +79,10 @@
 
     // here we get the data in string format so to convert the data to JSON format which is readable format we use JSON.parse method to do so
 
-    //-- onreadystateexchange generally used to track the state of the get and post method.
-    // -- redaystate gives the actual state of the  function.
-    xhr.send(); // generally open method is nnot called automatically it is called with the help of send() method and we can access  the api.
+    
+  
+    xhr.send(); 
+    // generally open method is not called automatically it is called with the help of send() method and we can access  the api.
 
     const button = document
       .getElementById("button")
