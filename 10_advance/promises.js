@@ -51,17 +51,17 @@ const promiseFourth = new Promise(function (resolve, reject) {
 
 promiseFourth
   .then((user) => {
-    console.log(user);
+    // console.log(user);
     return user.first_name;
   }) // the return statement of first .then will give the parameter to the second .then() method
   .then((first_name) => {
-    console.log(first_name);
+    // console.log(first_name);
   })
   .catch((error) => {
-    console.log(error);
+    // console.log(error);
   })
   .finally(() => {
-    console.log("This promises is finally complete");
+    // console.log("This promises is finally complete");
   });
 // this finally method will execute after all the execution .
 // if  the error is  true then we will get error in the .catch method else we will get the chaining method
@@ -69,29 +69,56 @@ promiseFourth
 
 //-- using Async And Await----------------------
 
-const promiseFive = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let error = true;
-    if (!error) {
-      resolve({ first_name: "Deeeepakkkkkk", last_name: "Yadavvvvvvvvvvvvvv" });
-    } else {
-      reject("Deepakkkkkkkkkkkkkkkkkkkkk Went Wrong!!!!!!");
-    }
-  }, 1000);
-});
+// const promiseFive = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let error = true;
+//     if (!error) {
+//       resolve({ first_name: "Deeeepakkkkkk", last_name: "Yadavvvvvvvvvvvvvv" });
+//     } else {
+//       reject("Deepakkkkkkkkkkkkkkkkkkkkk Went Wrong!!!!!!");
+//     }
+//   }, 1000);
+// });
 
 async function consumePromiseFive() {
   //   const response = await promiseFive;
   //   console.log(response);
-
   // other than that to catch the error we can use try catch method to do so because async await cannot directly handle the error so for that reason we can use try catch method
-
-  try {
-    const response = await promiseFive;
-    console.log(response);
-  } catch (error) {
-    console.log(error)
-  }
+  //   try {
+  //     const response = await promiseFive;
+  //     console.log(response);
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
 }
 
-consumePromiseFive();
+// consumePromiseFive();
+
+//-- Now we will learn how we use the API in async and await
+
+// async function details() {
+//   const response = await fetch("https://api.github.com/users/hiteshchaudhary");
+
+//   try {
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// details();
+
+
+// -- doing same thing with promises .then() .catch()
+
+fetch('https://api.github.com/users/hiteshchaudhary')
+.then((response)=>{
+  return response.json();
+})
+.then((data)=>{
+  console.log(data)
+})
+.catch((error)=>{
+  console.log(error)
+})
+
