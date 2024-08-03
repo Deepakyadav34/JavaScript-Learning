@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIND</title>
+  </head>
+  <body>
+    <button>Click me !!</button>
+  </body>
+  <script>
+    class React {
+      constructor(port, server) {
+        this.port = port;
+        this.server = "www.codeaurchai.com";
+        document
+          .querySelector("button")
+          .addEventListener("click", this.handleClick.bind(this));
+      }
+      handleClick() {
+        console.log("clicked");
+        console.log(this.server);
+      }
+    }
+    const data = new React();
+  </script>
+</html>
