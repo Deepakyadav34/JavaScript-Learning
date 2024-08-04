@@ -58,3 +58,8 @@ detail.forEach((value) => {
 
   console.log(value.first_name); // gives the first_name and similarly we can access the last_name.
 });
+
+
+let x=1
+console.log(x--)//1
+console.log(x)//0
